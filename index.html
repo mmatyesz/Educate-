@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/12ef25e50c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Educate!</title>
+</head>
+
+<script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function(e) {
+
+        // disable F12 key
+        if (e.keyCode == 123) {
+            return false;
+        }
+
+        // disable I key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            return false;
+        }
+
+        // disable J key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+
+        // disable U key
+        if (e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+</script>
+
+<body>
+
+    <nav>
+        <a href="https://www.instagram.com/girls.love.matyesz/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100077706337621" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <i class="fa-brands fa-discord" onclick="alert('coming soon!')"></i>
+    </nav>
+
+    <div id="container">
+        <div id="timer" class="box">
+            <div class="iconbox">
+                <span>&#9200;</span>
+            </div>
+            <h1 id="realtimer">
+                00:00:00
+            </h1>
+            <div id="buttons">
+                <button id="start" onclick="startStop()">start session</button>
+            </div>
+        </div>
+        <div id="todo" class="box">
+            <div class="iconbox">
+                &#128203;</div>
+            <h2>Tasks</h2>
+            <div id="todos">
+                <ul id="list">
+
+                </ul>
+            </div>
+
+            <div id="controls">
+                <input type="text" id="textField" placeholder="Add new task" onkeyup="check()">
+                <button id="submit" onclick="addTodo()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+        <p>coded with &#128156; by mmatyesz</p>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
